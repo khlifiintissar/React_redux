@@ -7,6 +7,37 @@
   pointer-events: none;
 }
 
+.hhh{
+  background-image: url('./fondecran.jpg');
+  background-position:center;
+}
+.group{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: space-between;
+  width: 500px;
+  min-height: 200px;
+  margin: 20px;
+}
+p{
+align-content: center;
+width: 95%;
+min-height: 150px;
+text-align: center;
+word-wrap:break-word;
+}
+.done{
+  text-decoration: line-through;
+}
+.butt{
+  display: flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items: flex-end;
+   justify-content: flex-end;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

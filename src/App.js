@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import AddItem from './Components/AddItem';
+import ListItems from './Components/ListItems';
 
 function App() {
+  const [all, setAll] = useState(true)
+  const handleAll=(x)=>{
+   setAll(x);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AddItem handleAll={handleAll}/>
+      <div style={{display:"flex",flexDirection:"row",flexWrap:"wrap",alignItems:"center",justifyContent:"space-around",backgroundColor:"green",minHeight:"390px"}}>
+      <ListItems all={all}/>
+      </div>
     </div>
   );
 }
